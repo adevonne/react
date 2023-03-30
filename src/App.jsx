@@ -1,9 +1,5 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import PokemonCard from './components/PokemonCard'
-
 
 const pokemonList = [
   {
@@ -15,7 +11,7 @@ const pokemonList = [
     name: "mew",
   },
 ];
-const pokemon = pokemonList[0]; 
+const pokemon = pokemonList[1]; 
 
 function App() {
   return (

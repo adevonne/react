@@ -1,22 +1,20 @@
-import React from "react"; 
 import PropTypes from 'prop-types';
 
 
-function PokemonCard(props) {
-  const {pokemon} = props
+function PokemonCard({ pokemon }) {
   return (
     <figure>
-      {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.name} />  : "???" }
+      { pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.name} />  : "???" } 
     <figcaption>{pokemon.name}</figcaption>
   </figure>
   ); 
 }
 
-PokemonCard.PropTypes = {
+PokemonCard.propTypes = {
   pokemon: PropTypes.shape({
-    name: PropTypes.isRequired, 
+    name: PropTypes.string.isRequired, 
     imgSrc: PropTypes.string,
-  }).isRequired
-};
+  }).isRequired,
+}
 
 export default PokemonCard;
